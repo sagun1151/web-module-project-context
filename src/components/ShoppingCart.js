@@ -14,10 +14,11 @@ const ShoppingCart = () => {
 	};
 	const remove =(id)=>{
 		console.log('id',id);
-		const newCart = cart.filter((item) => item.id !== id);
+		const newCart = cart.filter((item) => item.id !== parseInt(id));
 		console.log('newCart', newCart)
 		setCart(newCart);
 	}
+	console.log('cart', cart)
 
 	return (
 		<div className="shopping-cart">
